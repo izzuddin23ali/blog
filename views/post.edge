@@ -1,0 +1,59 @@
+@layout("layout.app")
+
+@section("content")
+
+    <!--page header-->
+
+    <header class = "masthead" style="background-image: url('{{ post.image }}')">
+
+        <div class = "overlay"></div>
+        
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-8 col-md-10 mx-auto">
+
+                    <div class="post-heading">
+
+                        <h1>{{ post.title }}</h1>
+                        
+                        <span class="mate">Posted by
+
+                            <a href="#">{{ post.username }}</a>
+
+                            on {{ post.createdAt.toDateString() }}
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!--post content-->
+
+    <article>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-8 col-md-10 mx-auto">
+
+                    {{ post.content}}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </article>
+
+@endsection

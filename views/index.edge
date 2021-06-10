@@ -1,0 +1,72 @@
+@layout("layout.app")
+
+@section("content")
+
+<div class="jumbotron text-center d-flex align-items-center" id="indexMain">
+
+    <div class="container text-center">
+
+        <div class="row my-5">
+
+            <div class="col-lg-10 m-auto hero">
+
+                <p><small>lorem ipsum@gmail.com</small></p>
+
+                <p><small>established 2021</small></p>
+
+                <h1>Everything Matuka</h1>
+
+                <p>We will try our best to provide you with the collecting of all the businesses, agents and local entreprenuers you need to get into the local car scene.</p>
+
+                <p>Feel free to stick around!</p>
+
+                <button onclick="location.href='services.html'" type="button" class="btn btn-dark">Browse Services</button>
+
+                <button onclick="location.href='http://emantukaforum.com:4567'" type="button" class="btn btn-dark">Browse Forum</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+            @each(post in posts)
+
+                <div class="post-preview">
+
+                    <a href="/post/{{ post._id }}">
+
+                        <h2 class="post-title">
+
+                            {{ post.title }}
+
+                        </h2>
+
+                    </a>
+
+                    <p class="post-meta">Posted by
+
+                        <a href="#">{{ post.username }}</a>
+                        on {{ post.createdAt.toDateString() }}
+
+                    </p>
+
+                </div>
+
+            @endeach
+
+        </div>
+
+    </div>
+
+</div>
+
+@endsection
