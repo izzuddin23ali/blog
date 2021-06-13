@@ -121,8 +121,27 @@ h1, h2, h3, h4, h5, h6{
     border-bottom: 5px solid black;
 }
 
+.navbar-dark .navbar-toggler{
+    border-color: white;
+}
+
+.indexBlackBg{
+    background-color: rgba(black, 0.5);
+}
 /*index*/
 
+#navbarSupportedContent ul li a{
+    color: white !important;
+}
+
+#navbarSupportedContent ul li a:hover,
+a .navbar-brand:hover{
+    color: $blue !important;
+}
+
+#indexNav button{
+    color: white;
+}
 #index .jumbotron{
     min-height: 75vh;
 }
@@ -138,7 +157,7 @@ h1, h2, h3, h4, h5, h6{
     color: white;
 }
 
-#index .hero{
+.hero{
     background-color: rgba(0,0,0,0.5);
     padding: 5%;
 }
@@ -523,7 +542,10 @@ h1, h2, h3, h4, h5, h6{
 }
 /*paint tab service*/
 
-#paintJumbotron{
+#paintJumbotron,
+#performanceJumbotron,
+#fitmentJumbotron,
+#aboutJumbotron{
     min-height: 10vh;
     background-color: $orange;
     color: $blue;

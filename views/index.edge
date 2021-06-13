@@ -28,6 +28,8 @@
 
                 <button onclick="location.href='/services'" type="button" class="btn btn-dark">Browse Services</button>
 
+                <button onclick="location.href='/blog'" type="button" class="btn btn-dark">Browse Blog Posts</button>
+
                 <button onclick="location.href='http://emantukaforum.com:4567'" type="button" class="btn btn-dark">Browse Forum</button>
 
             </div>
@@ -74,5 +76,26 @@
     </div>
 
 </div>
+
+@endsection
+
+@section("script")
+
+<script>
+
+    let burger = document.getElementById("button");
+    let navbarSupportedContent = document.getElementById("navbarSupportedContent")
+    let toggle = false;
+
+    burger.addEventListener("click", function(){
+        if(indexNav.classList.contains("indexBlackBg")){
+            indexNav.classList.remove("indexBlackBg");
+        }
+        else{
+            indexNav.classList.add("indexBlackBg");
+        }
+    })
+
+</script>
 
 @endsection

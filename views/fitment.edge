@@ -1,4 +1,4 @@
-@layout("layout.app")
+@layout("layout.app2")
 
 @section("title")
 
@@ -39,6 +39,216 @@
 
     </div>
 
+    <div class="row justify-content-end">
+
+        <div class="col-lg-4 text-end">
+
+            <select name="sort" id="sort" class="sort">
+
+                <option value="all">All</option>
+
+                <option value="coilover">Coilovers</option>
+
+                <option value="wheels">Wheels</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
 </div>
+
+<div class="container" id="coilover">
+
+    <div class="row my-2">
+
+        <div class="col-lg-12">
+
+            <h3>Coilovers</h3>
+
+        </div>
+
+    </div>
+
+    <!--first row-->
+
+    <div class="row justify-content-around mb-5 mt-3">
+
+        <div class="col-lg-2 brand pt-3 text-center">
+
+            <div class="row mb-3">
+    
+                <div class="col-lg-10 m-auto brandImage">
+    
+                    <img src="assets/reseller/d2.jpg">
+    
+                </div>
+    
+            </div>
+    
+            <h6>D2 Racing</h6>
+    
+            <p>
+    
+            <a href="https://www.facebook.com/BruneiD2Racing" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+    
+            <a href="https://www.instagram.com/ashs.garage/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+    
+            </p>
+    
+            <p><i class="fas fa-phone-square fa-lg"></i>    +673 8309269</p>
+            
+            <p class="meta"><i class="fas fa-info-circle"></i>  air suspension, brake, coilover, wheels</p>
+    
+        </div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+    </div>
+
+</div>
+
+<div class="container" id="wheels">
+
+    <div class="row my-2">
+
+        <div class="col-lg-12">
+
+            <h3>Wheels</h3>
+
+        </div>
+
+    </div>
+
+    <!--first row-->
+
+    <div class="row justify-content-around mb-5 mt-3">
+
+        <div class="col-lg-2 brand pt-3 text-center">
+
+            <div class="row mb-3">
+    
+                <div class="col-lg-10 m-auto brandImage">
+    
+                    <img src="assets/reseller/d2.jpg">
+    
+                </div>
+    
+            </div>
+    
+            <h6>D2 Racing</h6>
+    
+            <p>
+    
+            <a href="https://www.facebook.com/BruneiD2Racing" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+    
+            <a href="https://www.instagram.com/ashs.garage/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+    
+            </p>
+    
+            <p><i class="fas fa-phone-square fa-lg"></i>    +673 8309269</p>
+            
+            <p class="meta"><i class="fas fa-info-circle"></i>  air suspension, brake, coilover, wheels</p>
+    
+        </div>
+
+        <div class="col-lg-2 brand pt-3 text-center">
+
+            <div class="row mb-3">
+    
+                <div class="col-lg-10 m-auto brandImage">
+    
+                    <img src="assets/reseller/bodykit.png">
+    
+                </div>
+    
+            </div>
+    
+            <h6>cars_accessories_bn</h6>
+    
+            <p>
+    
+            <a href="https://www.instagram.com/cars_accessories_bn/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+
+            </p>
+    
+            <p><i class="fas fa-phone-square fa-lg"></i>    +673 7126066</p>
+            
+            <p class="meta"><i class="fas fa-info-circle"></i>  bodykit, coilover, lights, steering, track, wheels</p>
+    
+        </div>
+
+        <div class="col-lg-2 brand pt-3 text-center">
+
+            <div class="row mb-3">
+    
+                <div class="col-lg-10 m-auto brandImage">
+    
+                    <img src="assets/reseller/wheel.png">
+    
+                </div>
+    
+            </div>
+    
+            <h6>Allrim BN</h6>
+    
+            <p>
+    
+            <a href="https://www.facebook.com/AllRims/" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+    
+            <a href="https://www.instagram.com/rims_for_all/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+    
+            </p>
+    
+            <p><i class="fas fa-phone-square fa-lg"></i>    no number stated</p>
+            
+            <p class="meta"><i class="fas fa-info-circle"></i>  wheels</p>
+    
+        </div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+    </div>
+
+    
+
+</div>
+
+@endsection
+
+@section("script")
+
+<script>
+
+    var sort = document.getElementById("sort");
+
+    let coilover = document.getElementById("coilover");
+    let wheels = document.getElementById("wheels");
+
+    sort.addEventListener("change", function(){
+        if(this.value === "all"){
+            coilover.classList.remove("hidden")
+            wheels.classList.remove("hidden");
+        }
+        else if(this.value === "coilover"){
+            coilover.classList.remove("hidden")
+            wheels.classList.add("hidden");
+        }
+        else if(this.value === "wheels"){
+            coilover.classList.add("hidden")
+            wheels.classList.remove("hidden");
+        }
+    })
+
+</script>
 
 @endsection
