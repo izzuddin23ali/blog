@@ -23,7 +23,7 @@ module.exports = (req, res) => {
                 }
             })
         } else {
-            return res.redirect("auth/login")
+            return res.redirect("/auth/login")
         }
     })
 }

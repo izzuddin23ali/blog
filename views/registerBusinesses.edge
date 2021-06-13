@@ -1,0 +1,305 @@
+@layout("layout.app")
+
+@section("content")
+
+<!--page header-->
+
+<header class="masthead">
+
+    <div class="overlay"></div>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-8 col-md-10 mx-auto">
+
+                <div class="page-heading">
+
+                    <h1>Create New Post</h1>
+
+                </div>
+
+            </div>
+
+        </div>
+    
+    </div>
+
+</header>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-8 offset-md-2">
+
+            <form action="/businesses/store" method="POST" encType="multipart/form-data">
+
+                <div class="control-group">
+
+                    <div class="form-group floating-label-form-group controls">
+
+                        <label>Company Name</label>
+                        <input type="text" name="name" placeholder="Company Name" class="form-control" required>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group mt-3">
+
+                    <input type="file" name="image" class="form-control-file">
+
+                </div>
+
+                <div class="control-group">
+
+                    <div class="form-group floating-label-form-group controls">
+
+                        <label>Contact Number</label>
+                        <input type="number" name="number" class="form-control">
+
+                    </div>
+
+                </div>
+
+                <div class="control-group">
+
+                    <div class="form-group floating-label-form-group controls">
+
+                        <label>Instagram</label>
+                        <input type="link" name="instagram" placeholder="https://instagram.com/" class="form-control">
+
+                    </div>
+
+                </div>
+
+                <div class="control-group">
+
+                    <div class="form-group floating-label-form-group controls">
+
+                        <label>Facebook</label>
+                        <input type="link" name="facebook" placeholder="https://facebook.com/" class="form-control">
+
+                    </div>
+
+                </div>
+
+                <h2>Categorize the business</h2>
+
+                <h4>Performance</h4>
+
+                <!--performance checkbox-->
+
+                <div class="control-group">
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="brake" value="brake">
+
+                        <label for="brake"> Brake</label>
+
+                    </div>
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="engineSwap" value="engineSwap">
+
+                        <label for="engineSwap"> Engine Swap</label>
+
+                    </div>
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="exhaust" value="exhaust">
+
+                        <label for="exhaust"> Exhaust</label>
+
+                    </div>
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="forcedInduction" value="forcedInduction">
+
+                        <label for="forcedInduction"> Forced Induction</label>
+
+                    </div>
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="generalPerformance" value="generalPerformance">
+
+                        <label for="generalPerformance"> General Performance</label>
+
+                    </div>
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="tuning" value="tuning">
+
+                        <label for="tuning"> Tuning</label>
+
+                    </div>
+
+                </div>
+
+                <!--fitment checkbox-->
+
+                <h4>Fitment</h4>
+
+                <div class="control-group">
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="coilover" value="coilover">
+
+                        <label for="coilover"> Coilover</label>
+
+                    </div>
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="wheels" value="wheels">
+
+                        <label for="wheels"> Wheels</label>
+
+                    </div>
+
+                </div>
+
+                <!--paint management checkbox-->
+
+                <h4>Paint Management</h4>
+
+                <div class="control-group">
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="coater" value="coater">
+
+                        <label for="coater"> Ceramic Coat</label>
+
+                    </div>
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="detailer" value="detailer">
+
+                        <label for="detailer"> Detailer</label>
+
+                    </div>
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="diy" value="diy">
+
+                        <label for="diy"> DIY</label>
+
+                    </div>
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="lightRestoration" value="lightRestoration">
+
+                        <label for="lightRestoration"> Lights Restoration</label>
+
+                    </div>
+
+                </div>
+
+                <!--paint checkbox-->
+
+                <h4>Paint</h4>
+
+                <div class="control-group">
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="painter" value="painter">
+
+                        <label for="painter"> Painter</label>
+
+                    </div>
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="wrapper" value="wrapper">
+
+                        <label for="wrapper"> Wrapper</label>
+
+                    </div>
+
+                </div>
+
+                <!--design checkbox-->
+
+                <h4>Design</h4>
+
+                <div class="control-group">
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="bodykit" value="bodykit">
+
+                        <label for="bodykit"> Bodykit</label>
+
+                    </div>
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="carbonFibre" value="carbonFibre">
+
+                        <label for="carbonFibre"> Carbon Fibre</label>
+
+                    </div>
+
+                </div>
+
+                <!--others checkbox-->
+
+                <h4>Others</h4>
+
+                <div class="control-group">
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="accessories" value="accessories">
+
+                        <label for="accessories"> Accessories</label>
+
+                    </div>
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="others" value="others">
+
+                        <label for="others"> Others</label>
+
+                    </div>
+
+                    <div class="form-group floating-label form-group controls">
+
+                        <input type="checkbox" name="racingSeats" value="racingSeats">
+
+                        <label for="racingSeats"> Racing Seats</label>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group my-4 text-center">
+
+                    <button class="btn btn-primary">Register Business</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+@endsection

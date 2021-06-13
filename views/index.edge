@@ -1,5 +1,11 @@
 @layout("layout.app")
 
+@section("title")
+
+<title>Everything Matuka BN</title>
+
+@endsection
+
 @section("content")
 
 <div class="jumbotron text-center d-flex align-items-center" id="indexMain">
@@ -20,7 +26,7 @@
 
                 <p>Feel free to stick around!</p>
 
-                <button onclick="location.href='services.html'" type="button" class="btn btn-dark">Browse Services</button>
+                <button onclick="location.href='/services'" type="button" class="btn btn-dark">Browse Services</button>
 
                 <button onclick="location.href='http://emantukaforum.com:4567'" type="button" class="btn btn-dark">Browse Forum</button>
 
@@ -32,7 +38,7 @@
 
 </div>
 
-<div class="container">
+<div class="container hidden">
 
     <div class="row">
 

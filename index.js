@@ -15,6 +15,8 @@ const storeUserController = require("./controllers/storeUser");
 const loginController = require("./controllers/login");
 const loginUserController = require("./controllers/loginUser");
 const logoutController = require("./controllers/logout");
+const storeBusinessesController = require("./controllers/storeBusinesses");
+const createBusinessesController = require("./controllers/createBusinesses");
 
 const connectFlash = require("connect-flash");
 
@@ -31,20 +33,6 @@ app.use(expressSession({
         mongoUrl: "mongodb://localhost:27017/blog"
     })
 }))
-
-/*
-app.use(expressSession({
-    store: mongoStore.create({ mongoUrl: "mongodb://localhost:27017/blog"})
-}));
-*/
-/*
-app.use(expressSession({
-    secret: "secret",
-    store: new MongoStore({
-        mongooseConnection: mongoose.connection
-    })
-}));
-*/
 
 app.use(fileUpload());
 app.use(express.static("public"));
@@ -70,13 +58,48 @@ app.use("/posts/store", storePost);
 app.get("/", homePageController);
 app.get("/post/:id", getPostController);
 app.get("/posts/new", auth, createPostController);
-app.get("/posts/new", createPostController);
 app.post("/posts/store", storePostController);
 app.get("/auth/login", redirectIfAuthenticated, loginController);
-app.post("/user/login", redirectIfAuthenticated, loginUserController);
+app.post("/users/login", redirectIfAuthenticated, loginUserController);
 app.get("/auth/register", redirectIfAuthenticated, createUserController);
 app.get("/auth/logout", redirectIfAuthenticated, logoutController);
 app.post("/users/register", redirectIfAuthenticated, storeUserController);
+app.get("/businesses/new", auth, createBusinessesController);
+app.post("/businesses/store", redirectIfAuthenticated, storeBusinessesController);
+
+//static
+
+app.get("/services", (req, res) => {
+    res.render("services")
+});
+
+app.get("/about", (req, res) =>{
+    res.render("about");
+});
+
+app.get("/paintManagement", (req, res) => {
+    res.render("paintManagement");
+});
+
+app.get("/paint", (req, res) => {
+    res.render("paint")
+});
+
+app.get("/design", (req, res) => {
+    res.render("design")
+});
+
+app.get("/performance", (req, res) => {
+    res.render("performance")
+});
+
+app.get("/fitment", (req, res) => {
+    res.render("fitment")
+});
+
+app.get("/others", (req, res) => {
+    res.render("others")
+});
 
 app.listen(4000, () => {
     console.log("App listening on port 4000")

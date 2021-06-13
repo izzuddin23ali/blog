@@ -1,0 +1,567 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #333;
+  font-family: "Baloo 2", cursive;
+  font-weight: initial;
+  text-rendering: optimizeLegibility;
+}
+
+italic {
+  font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.fixed-top {
+  z-index: 50;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.navbar-brand {
+  cursor: default;
+}
+
+.blueText {
+  color: #3772FF;
+}
+
+.orangeText {
+  color: #FE9000;
+}
+
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#backToTop:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.boxShadow {
+  -webkit-box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link,
+.navbar-brand {
+  color: #fff;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #3c53b4;
+  z-index: 99;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader img {
+  width: 200px;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.loader.hidden {
+  -webkit-animation: fadeOut 1s;
+          animation: fadeOut 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.divider {
+  min-height: 10vh;
+  width: 100%;
+  background-color: #363538;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+/*index*/
+#index .jumbotron {
+  min-height: 75vh;
+}
+
+#indexMain {
+  background-image: url("/assets/index/hero monochrome orange.jpg");
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+
+#indexMain a {
+  color: white;
+}
+
+#index .hero {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5%;
+}
+
+#index .hero h1 {
+  font-size: 5rem;
+}
+
+#index .hero p {
+  font-size: 1.3rem;
+}
+
+#index .boxShadow {
+  margin: 10px 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #333;
+}
+
+#indexForum .boxShadow {
+  padding: 25px;
+}
+
+#indexAbout .boxShadow {
+  margin: 10px 0;
+  padding: 30px;
+}
+
+.indexBox img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*forum in index*/
+#indexForum ul {
+  padding: 0;
+}
+
+#indexForum h2,
+#indexForum ul li {
+  color: #fff;
+}
+
+#indexForum ul li {
+  list-style: none;
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+  color: #fff;
+}
+
+#indexForum ul li:nth-last-child(1) {
+  border-bottom: 0px;
+}
+
+#indexForum {
+  background-image: url("/assets/index/meet monochrome orange.jpg");
+  background-size: cover;
+  color: #333;
+}
+
+#indexForumContainer {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #3772FF;
+  padding: 25px;
+}
+
+/*service in index*/
+#indexService {
+  background-image: url("/assets/index/performance monochrome blue.jpg");
+  background-size: cover;
+}
+
+#indexService .row {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#indexService .row .card {
+  position: relative;
+  cursor: pointer;
+  border: 0px;
+  background-color: inherit;
+}
+
+#indexService .row .card .face {
+  width: 300px;
+  height: 200px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#indexService .row .card .face.face1 {
+  position: relative;
+  background: #363538;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+#indexService .row .card:hover .face.face1 {
+  background: #3772FF;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+#indexService .row .face.face1 .content {
+  opacity: 0.2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#indexService .row .card:hover .face.face1 .content {
+  opacity: 1;
+}
+
+#indexService .row .card .face.face1 .content img {
+  text-align: center;
+  max-width: 100px;
+}
+
+#indexService .row .card .face.face1 .content h3 {
+  margin: 10px 0 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#indexService .row .card .face.face2 {
+  position: relative;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 10px 50px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 10px 50px rgba(0, 0, 0, 0.6);
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+#indexService .row .card:hover .face.face2 {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+#indexService .row .card .face.face2 .content p {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+#indexService .row .card .face.face2 .content a {
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: #333;
+  padding: 5px;
+}
+
+#indexService .row .card .face.face2 .content a:hover {
+  background: #333;
+  color: #fff;
+}
+
+#indexAbout {
+  background-image: url("");
+}
+
+#indexAbout1,
+#indexAbout2,
+#indexAbout3 {
+  min-height: 60vh;
+  text-rendering: optimizeLegibility;
+}
+
+#indexAbout1 div,
+#indexAbout2 div,
+#indexAbout3 div {
+  background-color: rgba(54, 53, 56, 0.8);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 1.1em;
+  min-width: 50%;
+  max-width: 75%;
+  margin: auto 0;
+}
+
+#indexAbout1 {
+  background-image: url("/assets/index/problem.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#indexAbout2 {
+  background-image: url("/assets/index/solution.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#indexAbout3 {
+  background-image: url("/assets/index/future.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/*
+
+#indexAbout2{
+    background-image: url("/assets/index/solution.jpg");
+    background-size: cover;
+}
+
+*/
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+/*forum.html*/
+#forumMainMenu ul {
+  padding: 0;
+  margin-top: 10px;
+}
+
+#forumMainMenu ul li {
+  border-bottom: 1px solid black;
+  list-style: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+#forumMainMenu ul li a:hover {
+  text-decoration: underline;
+}
+
+#forumMainMenu ul li:nth-last-child(1) {
+  border-bottom: 0px;
+}
+
+#forumMainMenu a {
+  text-decoration: none;
+  color: #EBF5Df;
+}
+
+.forumCat {
+  margin: 15px 0px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.forumCat:hover {
+  -webkit-box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2);
+}
+
+.forumCatHeader {
+  background-color: #FE9000;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.forumCatList {
+  padding: 10px 10px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.forumCatListLast {
+  padding: 10px 5px;
+  border-bottom: 0px;
+}
+
+#forumJumbotron {
+  height: 20vh;
+}
+
+/*services*/
+#servicesJumbotron {
+  height: 20vh;
+  background-image: url("/assets/service/jumbo monochrome orange.jpg");
+  background-position: 50% 50%;
+  color: #3772FF;
+}
+
+.servicesCat {
+  height: 30vh;
+  color: #3772FF;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#performanceCard {
+  background-image: url("/assets/service/performance.jpg");
+  background-size: cover;
+  background-position: 50% 51%;
+}
+
+#fitmentCard {
+  background-image: url("/assets/service/fitment.jpg");
+  background-size: cover;
+  background-position: 50% 90%;
+}
+
+#paintCard {
+  background-image: url("/assets/service/paint.jpg");
+  background-size: cover;
+  background-position: 50% 80%;
+}
+
+#designCard {
+  background-image: url("/assets/service/design.jpg");
+  background-size: cover;
+  background-position: 50% 46%;
+}
+
+.backedHeader {
+  background-color: rgba(141, 140, 138, 0.5);
+}
+
+/*design tab service*/
+#designJumbotron {
+  background-image: url("/assets/serviceDesign/design jumbo.jpg");
+  background-size: cover;
+  height: 20vh;
+  color: #FE9000;
+}
+
+#serviceIndex .jumbotron h1 {
+  font-size: 5.5em;
+}
+
+#serviceIndex #brands {
+  background-color: rgba(254, 144, 0, 0.75);
+}
+
+.brand {
+  cursor: pointer;
+}
+
+.brand img {
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+.brand a {
+  color: white;
+}
+
+.brandImage img {
+  width: 100%;
+  height: auto;
+}
+
+.brand:hover {
+  background-color: #FE9000;
+}
+
+.regionLabel {
+  background-color: rgba(254, 144, 0, 0.9);
+  color: #333;
+  text-align: start;
+}
+
+#sortRow {
+  background-color: #333;
+}
+
+.brand h6 .smaller {
+  font-size: 0.9em;
+}
+
+/*paint tab service*/
+#paintJumbotron {
+  min-height: 10vh;
+  background-color: #FE9000;
+  color: #3772FF;
+  background-position: 50% 50%;
+}
+
+#paintIndex .tab {
+  border: 1px solid #FE9000;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+/*# sourceMappingURL=style.css.map */
