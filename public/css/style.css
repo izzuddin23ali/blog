@@ -572,7 +572,8 @@ a .navbar-brand:hover {
 #paintJumbotron,
 #performanceJumbotron,
 #fitmentJumbotron,
-#aboutJumbotron {
+#aboutJumbotron,
+#othersJumbotron {
   min-height: 10vh;
   background-color: #FE9000;
   color: #3772FF;

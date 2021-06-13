@@ -55,8 +55,7 @@ const redirectIfAuthenticated = require("./middleware/redirectIfAuthenticated");
 
 app.use("/posts/store", storePost);
 
-app.get("/", homePageController);
-
+app.get("/blog", homePageController);
 app.get("/post/:id", getPostController);
 app.get("/posts/new", auth, createPostController);
 app.post("/posts/store", storePostController);
@@ -69,6 +68,10 @@ app.get("/businesses/new", auth, createBusinessesController);
 app.post("/businesses/store", redirectIfAuthenticated, storeBusinessesController);
 
 //static
+
+app.get("/", (req, res) => {
+    res.render("index")
+})
 
 app.get("/services", (req, res) => {
     res.render("services")

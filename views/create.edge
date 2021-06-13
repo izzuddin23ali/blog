@@ -1,4 +1,4 @@
-@layout("layout.app")
+@layout("layout.app2")
 
 @section("title")
 
@@ -8,37 +8,29 @@
 
 @section("content")
 
-<!--page header-->
-
-<header class="masthead">
-
-    <div class="overlay"></div>
+<div class="jumbotron d-flex align-items-center" id="paintJumbotron">
 
     <div class="container">
 
         <div class="row">
 
-            <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="col-lg-12">
 
-                <div class="page-heading">
-
-                    <h1>Create New Post</h1>
-
-                </div>
+                <h1>Create New Post</h1>
 
             </div>
 
         </div>
-    
+
     </div>
 
-</header>
+</div>
 
 <div class="container">
 
     <div class="row">
 
-        <div class="col-md-8 offset-md-2">
+        <div class="col-lg-12">
 
             <form action="/posts/store" method="POST" encType="multipart/form-data">
 

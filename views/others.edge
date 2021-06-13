@@ -1,4 +1,4 @@
-@layout("layout.app")
+@layout("layout.app2")
 
 @section("title")
 
@@ -8,7 +8,7 @@
 
 @section("content")
 
-<div class="jumbotron d-flex align-item-center">
+<div class="jumbotron d-flex align-item-center" id="othersJumbotron">
 
     <div class="container">
 
@@ -33,12 +33,307 @@
         <div class="col-lg-12">
 
             <h3>Others</h3>
-            <p>You can contact these resellers for all your performance enhancement, engine swaps, forced induction installment and remapping your tunes and more.</p>
+            <p>Browse through these businesses that offers products or services that does not belong to any of the other five categories.</p>
+
+        </div>
+
+    </div>
+
+    <div class="row justify-content-end">
+
+        <div class="col-lg-4 text-end">
+
+            <select name="sort" id="sort" class="sort">
+
+                <option value="all">All</option>
+                
+                <option value="inCarAccessories">In-Car Accessories</option>
+
+                <option value="inCarEntertainment">In-Car Entertainment</option>
+
+                <option value="others">Others</option>
+
+                <option value="racingSeats">Racing Seats</option>
+
+            </select>
 
         </div>
 
     </div>
 
 </div>
+
+<div class="container" id="inCarAccessories">
+
+    <div class="row my-2">
+
+        <div class="col-lg-12">
+
+            <h3>In-Car Accessories</h3>
+
+        </div>
+
+    </div>
+
+    <!--first row-->
+
+    <div class="row justify-content-around mb-5 mt-3">
+
+        <div class="col-lg-2 brand pt-3 text-center">
+
+            <div class="row mb-3">
+    
+                <div class="col-lg-10 m-auto brandImage">
+    
+                    <img src="assets/reseller/d2.jpg">
+    
+                </div>
+    
+            </div>
+    
+            <h6>D2 Racing</h6>
+    
+            <p>
+    
+            <a href="https://www.facebook.com/BruneiD2Racing" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+    
+            <a href="https://www.instagram.com/ashs.garage/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+    
+            </p>
+    
+            <p><i class="fas fa-phone-square fa-lg"></i>    +673 8309269</p>
+            
+            <p class="meta"><i class="fas fa-info-circle"></i>  air suspension, brake, coilover, wheels</p>
+    
+        </div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+    </div>
+
+</div>
+
+<div class="container" id="inCarEntertainment">
+
+    <div class="row my-2">
+
+        <div class="col-lg-12">
+
+            <h3>In-Car Entertainment</h3>
+
+        </div>
+
+    </div>
+
+    <!--first row-->
+
+    <div class="row justify-content-around mb-5 mt-3">
+
+        <div class="col-lg-2 brand pt-3 text-center">
+
+            <div class="row mb-3">
+    
+                <div class="col-lg-10 m-auto brandImage">
+    
+                    <img src="assets/reseller/d2.jpg">
+    
+                </div>
+    
+            </div>
+    
+            <h6>D2 Racing</h6>
+    
+            <p>
+    
+            <a href="https://www.facebook.com/BruneiD2Racing" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+    
+            <a href="https://www.instagram.com/ashs.garage/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+    
+            </p>
+    
+            <p><i class="fas fa-phone-square fa-lg"></i>    +673 8309269</p>
+            
+            <p class="meta"><i class="fas fa-info-circle"></i>  air suspension, brake, coilover, wheels</p>
+    
+        </div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+    </div>
+
+</div>
+
+<div class="container" id="others">
+
+    <div class="row my-2">
+
+        <div class="col-lg-12">
+
+            <h3>Others</h3>
+
+        </div>
+
+    </div>
+
+    <!--first row-->
+
+    <div class="row justify-content-around mb-5 mt-3">
+
+        <div class="col-lg-2 brand pt-3 text-center">
+
+            <div class="row mb-3">
+    
+                <div class="col-lg-10 m-auto brandImage">
+    
+                    <img src="assets/reseller/d2.jpg">
+    
+                </div>
+    
+            </div>
+    
+            <h6>D2 Racing</h6>
+    
+            <p>
+    
+            <a href="https://www.facebook.com/BruneiD2Racing" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+    
+            <a href="https://www.instagram.com/ashs.garage/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+    
+            </p>
+    
+            <p><i class="fas fa-phone-square fa-lg"></i>    +673 8309269</p>
+            
+            <p class="meta"><i class="fas fa-info-circle"></i>  air suspension, brake, coilover, wheels</p>
+    
+        </div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+    </div>
+
+</div>
+
+<div class="container" id="racingSeats">
+
+    <div class="row my-2">
+
+        <div class="col-lg-12">
+
+            <h3>Racing Seats</h3>
+
+        </div>
+
+    </div>
+
+    <!--first row-->
+
+    <div class="row justify-content-around mb-5 mt-3">
+
+        <div class="col-lg-2 brand pt-3 text-center">
+
+            <div class="row mb-3">
+    
+                <div class="col-lg-10 m-auto brandImage">
+    
+                    <img src="assets/reseller/d2.jpg">
+    
+                </div>
+    
+            </div>
+    
+            <h6>D2 Racing</h6>
+    
+            <p>
+    
+            <a href="https://www.facebook.com/BruneiD2Racing" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+    
+            <a href="https://www.instagram.com/ashs.garage/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+    
+            </p>
+    
+            <p><i class="fas fa-phone-square fa-lg"></i>    +673 8309269</p>
+            
+            <p class="meta"><i class="fas fa-info-circle"></i>  air suspension, brake, coilover, wheels</p>
+    
+        </div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-2"></div>
+
+    </div>
+
+</div>
+
+@endsection
+
+@section("script")
+
+<script>
+
+    var sort = document.getElementById("sort");
+
+    let inCarAccessories = document.getElementById("inCarAccessories");
+    let inCarEntertainment = document.getElementById("inCarEntertainment");
+    let others = document.getElementById("others");
+    let racingSeats = document.getElementById("racingSeats");
+    let universal = document.getElementById("universal");
+
+    sort.addEventListener("change", function(){
+        if(this.value === "all"){
+            inCarAccessories.classList.remove("hidden");
+            inCarEntertainment.classList.remove("hidden");
+            others.classList.remove("hidden")
+            racingSeats.classList.remove("hidden");
+        }
+        else if(this.value === "inCarAccessories"){
+            inCarAccessories.classList.remove("hidden");
+            inCarEntertainment.classList.add("hidden");
+            others.classList.add("hidden")
+            racingSeats.classList.add("hidden");
+        }
+        else if(this.value === "inCarEntertainment"){
+            inCarAccessories.classList.add("hidden");
+            inCarEntertainment.classList.remove("hidden");
+            others.classList.add("hidden")
+            racingSeats.classList.add("hidden");
+        }
+        else if(this.value === "others"){
+            inCarAccessories.classList.add("hidden");
+            inCarEntertainment.classList.add("hidden");
+            others.classList.remove("hidden")
+            racingSeats.classList.add("hidden");
+        }
+        else if(this.value === "racingSeats"){
+            inCarAccessories.classList.add("hidden");
+            inCarEntertainment.classList.add("hidden");
+            others.classList.add("hidden")
+            racingSeats.classList.remove("hidden");
+        }
+    })
+
+</script>
 
 @endsection
