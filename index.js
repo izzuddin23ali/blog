@@ -6,6 +6,8 @@ const fileUpload = require("express-fileupload");
 const expressSession = require("express-session");
 const connectMongo = require("connect-mongo");
 
+var db = require("./config/keys").MongoURI;
+
 const createPostController = require("./controllers/createPost");
 const homePageController = require("./controllers/homePage");
 const storePostController = require("./controllers/storePost");
@@ -22,9 +24,15 @@ const connectFlash = require("connect-flash");
 
 const app = new express();
 
+/*
 mongoose.connect("mongodb://localhost:27017/blog", {useNewUrlParser: true})
     .then(() => "You are now connected to Mongo")
     .catch(err => console.error("Something went wrong", err));
+*/
+
+mongoose.connect(db, {newURLParser: true})
+    .then(() => console.log("MongoDB Connected"))
+    .catch(err => console.log(err));
 
 app.use(expressSession({
     secret: "secret", resave: false,
