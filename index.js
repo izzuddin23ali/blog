@@ -30,11 +30,11 @@ mongoose.connect("mongodb://localhost:27017/blog", {useNewUrlParser: true})
     .catch(err => console.error("Something went wrong", err));
 */
 
-mongoose.connect(db, {useNewURLParser: true})
+mongoose.connect(db, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log("MongoDB Connected"))
     .catch(err => console.log(err));
 
-    /*
+/*
 app.use(expressSession({
     secret: "secret", resave: false,
     saveUninitialized: false,
