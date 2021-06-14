@@ -33,7 +33,7 @@ mongoose.connect("mongodb://localhost:27017/blog", {useNewUrlParser: true})
 mongoose.connect(db, {newURLParser: true})
     .then(() => console.log("MongoDB Connected"))
     .catch(err => console.log(err));
-
+/*
 app.use(expressSession({
     secret: "secret", resave: false,
     saveUninitialized: false,
@@ -41,7 +41,15 @@ app.use(expressSession({
         mongoUrl: "mongodb://localhost:27017/blog"
     })
 }))
+*/
 
+app.use(expressSession({
+    secret: "secret", resave: false,
+    saveUninitialized: false,
+    store: connectMongo.create({
+        mongoUrl: db
+    })
+}))
 app.use(fileUpload());
 app.use(express.static("public"));
 app.use(expressEdge.engine);
