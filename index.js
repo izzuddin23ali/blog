@@ -6,7 +6,11 @@ const fileUpload = require("express-fileupload");
 const expressSession = require("express-session");
 const connectMongo = require("connect-mongo");
 
+const uri = process.env.MONGODB_URI
+
+/*
 var db = require("./config/keys").MongoURI;
+*/
 
 const createPostController = require("./controllers/createPost");
 const homePageController = require("./controllers/homePage");
@@ -30,7 +34,7 @@ mongoose.connect("mongodb://localhost:27017/blog", {useNewUrlParser: true})
     .catch(err => console.error("Something went wrong", err));
 */
 
-mongoose.connect(db, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log("MongoDB Connected"))
     .catch(err => console.log(err));
 
@@ -48,7 +52,7 @@ app.use(expressSession({
     secret: "secret", resave: false,
     saveUninitialized: false,
     store: connectMongo.create({
-        mongoUrl: db
+        mongoUrl: uri
     })
 }))
 
